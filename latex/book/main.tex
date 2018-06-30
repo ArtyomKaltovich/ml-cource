@@ -1,0 +1,40 @@
+\documentclass[a4paper,14pt, openany, oneside]{book}
+
+
+\input{../include/preamble-book}
+\addbibresource{../bib/bibliography.bib}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\LARGE\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\LARGE\bfseries}
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Large\bfseries}
+\titleformat{\subsection}[hang]{\large\bfseries}{\thesubsection\hsp\textcolor{gray75}{|}\hsp}{0pt}{\large\bfseries}
+
+
+\begin{document}
+
+\title{\huge Машинное обучение \\ \Large Вводный курс \vspace{2cm}}
+\author{\large KaltovichArtyom@gmail.com}
+\date{\large Июнь 2018}
+\maketitle
+
+%\mainmatter
+\tableofcontents
+
+\chapter*{Предисловие}
+\addcontentsline{toc}{chapter}{Предисловие}
+\input{preface/content}
+
+\chapter*{Введение}
+\addcontentsline{toc}{chapter}{Введение}
+\input{intro/content}
+
+
+\chapter{Визуализация и кластеризация}
+\input{chapter1/content}
+
+
+\addcontentsline{toc}{chapter}{Список литературы}
+\printbibliography
+
+\end{document}

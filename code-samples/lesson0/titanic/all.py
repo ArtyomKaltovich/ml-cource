@@ -36,7 +36,11 @@ class TitanicClassifier(BaseEstimator):
 
 
 train = prepare('data/train.csv')
-X, y = extract_target_column(train, 'Survived')
+print(len(train))
+new_train = train[train['Survived'] == True]
+new_train = new_train.append(train[train['Survived'] == False].sample(len(new_train)))
+print(len(new_train))
+X, y = extract_target_column(new_train, 'Survived')
 test = prepare('data/test.csv')
 
 cv = KFold(n_splits=5, shuffle=True)

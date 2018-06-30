@@ -1,0 +1,45 @@
+%\input{../include/preamble}
+\makeatletter
+\@ifclassloaded{article}{%
+    \input{../../include/preamble}%
+    \addbibresource{../../bib/bibliography.bib}
+}{%
+    \input{../include/preamble}%
+    \addbibresource{../bib/bibliography.bib}
+}
+\makeatother
+
+%%% Страница
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+\usepackage{multicol}
+
+\graphicspath{{../img/}{../../img/}}%
+  
+\hypersetup{				% Гиперссылки
+	unicode=true,           % русские буквы в раздела PDF
+	pdftitle={Машинное обучение. Вводный курс},   % Заголовок
+	pdfauthor={Калтович Артём},      % Автор
+	pdfsubject={Машинное обучение. Вводный курс},      % Тема
+	pdfcreator={Калтович Артём}, % Создатель
+	pdfproducer={Калтович Артём}, % Производитель
+	pdfkeywords={Машинное обучение} {Курс}, % Ключевые слова
+	colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+	linkcolor=black,          % внутренние ссылки
+	citecolor=black,        % на библиографию
+	filecolor=magenta,      % на файлы
+	urlcolor=blue           % на URL
+}
+
+% Add word "Chapter" to all numbered item in table of content
+\usepackage{tocloft}
+\usepackage{titletoc}% 
+\titlecontents{chapter}% <section-type>
+  [0pt]% <left>
+  {}% <above-code>
+  {\bfseries\chaptername\ \thecontentslabel\quad}% <numbered-entry-format>
+  {\bfseries}% <numberless-entry-format>
+  % Adding dots to all items in table of content
+  {\bfseries \cftdotfill{\cftdotsep} \contentspage}% <filler-page-format>
+  
+\setlength{\parskip}{-.6cm}
+  

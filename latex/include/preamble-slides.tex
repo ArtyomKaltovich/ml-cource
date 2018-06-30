@@ -1,0 +1,27 @@
+\input{../../include/preamble}
+
+\hypersetup{				% Гиперссылки
+    unicode=true,           % русские буквы в раздела PDF
+    pdftitle={Machine Learning Cource},   % Заголовок
+    pdfauthor={Artsiom Kaltovich},      % Автор
+    pdfsubject={Machine Learning Cource},      % Тема
+    pdfcreator={Artsiom Kaltovich}, % Создатель
+    pdfproducer={Artsiom Kaltovich}, % Производитель
+    pdfkeywords={Machine Learning} {latex}, % Ключевые слова
+    colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+    linkcolor=black,          % внутренние ссылки
+    citecolor=black,        % на библиографию
+    filecolor=magenta,      % на файлы
+    urlcolor=blue           % на URL
+}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\justifying % выравнивание по ширине
+\hyphenpenalty=100000 % без переносов
+
+\newcommand{\frameheight}{0.80\textheight}
+\newcommand{\fullframeimage}[1]{
+    \begin{center}
+        \includegraphics[width=\linewidth, height=\frameheight, keepaspectratio]{#1}
+    \end{center}
+}
